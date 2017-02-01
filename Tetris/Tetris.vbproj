@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5ED1A480-6863-449C-B5A2-60B605E4FB94}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Tetris.My.MyApplication</StartupObject>
+    <RootNamespace>Tetris</RootNamespace>
+    <AssemblyName>Tetris</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Tetris.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Tetris.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Tetris.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Encryption.vb" />
+    <Compile Include="TetrisAnimations.vb" />
+    <Compile Include="TetrisBoardAnimation.Designer.vb">
+      <DependentUpon>TetrisBoardAnimation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TetrisBoardAnimation.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmBugReport.Designer.vb">
+      <DependentUpon>frmBugReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBugReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHelp.Designer.vb">
+      <DependentUpon>frmHelp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHelp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlayback.Designer.vb">
+      <DependentUpon>frmPlayback.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPlayback.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.Designer.vb">
+      <DependentUpon>frmSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHighScores.Designer.vb">
+      <DependentUpon>frmHighScores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHighScores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetPiece.vb" />
+    <Compile Include="HighScore.vb" />
+    <Compile Include="HighScoreList.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PauseBoard.vb" />
+    <Compile Include="PieceDisplay.Designer.vb">
+      <DependentUpon>PieceDisplay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PieceDisplay.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlayerStartupMessage.vb" />
+    <Compile Include="RandPiece.vb" />
+    <Compile Include="Score.vb" />
+    <Compile Include="ScoreDisplay.Designer.vb">
+      <DependentUpon>ScoreDisplay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ScoreDisplay.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sound.vb" />
+    <Compile Include="TetrisGame.vb" />
+    <Compile Include="TetrisBoard.vb" />
+    <Compile Include="TetrisBoardControl.Designer.vb">
+      <DependentUpon>TetrisBoardControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TetrisBoardControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TetrisEventBoard.vb" />
+    <Compile Include="TetrisFunctions.vb" />
+    <Compile Include="TetrisPiece.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TetrisBoardAnimation.resx">
+      <DependentUpon>TetrisBoardAnimation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBugReport.resx">
+      <DependentUpon>frmBugReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHelp.resx">
+      <DependentUpon>frmHelp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPlayback.resx">
+      <DependentUpon>frmPlayback.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHighScores.resx">
+      <DependentUpon>frmHighScores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PieceDisplay.resx">
+      <DependentUpon>PieceDisplay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScoreDisplay.resx">
+      <DependentUpon>ScoreDisplay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TetrisBoardControl.resx">
+      <DependentUpon>TetrisBoardControl.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Texture.png" />
+    <None Include="Resources\TetrisAudio.mid" />
+    <Content Include="Tetris.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
